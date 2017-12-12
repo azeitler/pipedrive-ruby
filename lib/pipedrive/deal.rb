@@ -15,9 +15,9 @@ module Pipedrive
       res.success? ? true : bad_response(res,opts)
     end
 
-    def remove_participant(opts = {})
-      res = delete "#{resource_path}/#{id}/participants", :body => opts
-      res.success? ? true : bad_response(res,opts)
+    def remove_participant(deal_participant_id)
+      res = delete "#{resource_path}/#{id}/participants/#{deal_participant_id}", :body => {}
+      res.success? ? true : bad_response(res,{})
     end
 
     def participants
