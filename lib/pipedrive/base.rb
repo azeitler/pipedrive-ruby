@@ -81,7 +81,7 @@ module Pipedrive
         @table.merge!(res['data'])
       else
         puts "error: PUT #{url}"
-        bad_response(res, id)
+        res
       end
     end
     
