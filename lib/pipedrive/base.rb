@@ -15,7 +15,7 @@ module Pipedrive
   class Base < OpenStruct
 
     include HTTParty
-    debug_output $stdout # <= this is it!
+    # debug_output $stdout # <= this is it!
     
     base_uri 'https://api.pipedrive.com/v1'
     headers HEADERS
